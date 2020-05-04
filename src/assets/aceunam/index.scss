@@ -1,0 +1,15 @@
+// @import '../vendor/bootstrap/bootstrap.scss';
+@import'./globalPropio/_bootstrap.scss';
+
+// @import './globalPropio/_owner';
+@import './globalPropio/_owner.scss';
+@import'./globalPropio/ui.grid.scss';
+
+@import './ace/ace.scss';
+
+@import'./globalPropio/_fontawesome.min.scss';
+// @import'./globalPropio/_solid.scss';
+
+// vistas de compoentes
+@import'../aceunam/globalPropio/view/login.scss';
+@import'../aceunam/globalPropio/components/header.scss'

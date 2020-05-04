@@ -1,0 +1,182 @@
+<!-- <div class="card o-hidden custom" [@animate]="{value:'*',params:{y:'200px',opacity:'0',delay:'800ms', duration: '800ms'}}">
+<div class="row">
+    <div class="col-md-12"><div class="p-4">
+        <div class="auth-logo text-center mb-3">
+            <img src="assets/images/logo.png" alt=""><br>
+        </div>
+        <hr>
+        <form [formGroup]="signinForm" (ngSubmit)="signin()">
+            <div class="form-group">
+                <label class="label-form-b pl-2">Usuario:</label>
+                <input class="form-control form-control-sm" type="text" (change)="loadDepen($event)" formControlName="CredUsuario">
+            </div>
+            <div class="form-group">
+                <label class="label-form-b pl-2">Unidad Orgánica:</label>
+                <select class="form-control form-control-sm" formControlName="CredDepenKey">
+                    <option value="{{item.cCredDepenKey}}" *ngFor="let item of dependencias;let i = index" [selected]="index==0">{{item.cUniEjeAreaAbrev}}</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="label-form-b pl-2">Clave:</label>
+                <input class="form-control form-control-sm" type="password" formControlName="Resumen">
+            </div>
+
+            <btn-loading btnClass="btn-primary btn-sm btn-block mt-3" [loadingText]="loadingText" [loading]="loading">Ingresar</btn-loading>
+        </form>
+    </div></div>
+</div></div>
+
+<ng-template #modalLoading let-modal>
+    <div class="modal-body" align="center">
+        <div><img class="precarga" src="./assets/images/gif/loading.gif"></div>
+        <button type="button" id="btnLoadingClose" class="btn btn-primary btn-sm d-none" (click)="modal.close('Cross click')"></button>
+    </div>
+</ng-template> -->
+
+
+
+<!-- Ace 2.1 -->
+  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/cyt/owner.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/ace.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/fontawesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/solid.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png"/> -->
+
+
+  <!--  formulario -->
+<!-- <div class="login-container">
+  <aside class="main-aside"> 
+    <article class="d-flex flex-column bgc-primary-l4 px-1o5r py-3r">
+      <div class="c-logo ta-center">
+        <img src="../../../../assets/images/logo-white.png" style="width:120px;">
+      </div>
+      <p class="c-logo bc-grey-l1 ta-center fs-110g b-b-1 mt-1r">
+        Sistema Integrado de Gestión Universitaria
+      </p>
+      <a href="#" class="text c-grey-d3 d-inline-block mt-4">
+        <i class="fas fa-file-pdf text-lg c-danger mr-2"></i>Manual de Usuario
+      </a>
+      <br />
+      <a href="#" class="text c-grey-d3 d-inline-block mt-3">
+        <i class="fas fa-phone text-md c-purple-m2 mr-2"></i>995792654 - 953639582
+      </a>
+      <div class="fs-sm c-grey-d3 ta-center mt-3r">Copy Right &copy; 2020</div>
+    </article>
+  </aside>
+
+
+  <main class="main px-3r pt-3r">
+    <form [formGroup]="signinForm" (ngSubmit)="signin()" class="d-grid" style="grid-template-columns: minmax(200px,1fr); gap:1rem;">
+      <div class="c-logo ta-center d-none">
+        <img src="assets/image/logo.png" style="width:120px;">
+      </div>
+      <p class="c-logo bc-grey-l1 ta-center fs-110g d-none">
+        Sistema Integrado de Gestión Universitaria
+      </p>
+
+      <p class="c-dark-tp4 b-b-1 bc-grey-l1 fs-120g">
+        <i class="fa fa-coffee c-orange-m2 text-lg mr-o5r"></i>Welcome
+      </p>
+
+      <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2" >
+        <input type="text" class="form-control form-control-md shadow-none w-100g" (change)="loadDepen($event)" formControlName="CredUsuario" />
+        <label class="floating-label c-grey-l1 fs-100g ml-n1r" for="usur_login">Usuario</label>
+        <i class="fa fa-user c-grey-m2 ml-n4"></i>
+      </div>
+      
+      <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2" >
+        <select class="form-control form-control-md shadow-none w-100g" formControlName="CredDepenKey" id="area_key">
+          <option value="{{item.cCredDepenKey}}" *ngFor="let item of dependencias;let i = index" [selected]="index==0">{{item.cUniEjeAreaAbrev}}</option>
+        </select>
+        <label class="floating-label c-grey-l1 fs-100g ml-n1r" for="area_key">Unidad Orgánica</label>
+      </div>
+
+      <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2">
+        <input type="password" class="form-control form-control-md shadow-none w-100g" formControlName="Resumen" id="usur_psw1" autocomplete="off" />
+        <i class="fa fa-key c-grey-m2 ml-n4"></i>
+        <label class="floating-label c-grey-l1 ml-n1r" for="usur_psw1">Contraseña</label>
+      </div>
+
+      <div>
+      <btn-loading btnClass="btn-primary btn-sm btn-block mt-3" [loadingText]="loadingText" [loading]="loading">Ingresar</btn-loading>
+
+    </div>
+    </form>
+
+
+  </main>
+</div>
+
+  <ng-template #modalLoading let-modal>
+    <div class="modal-body" align="center">
+        <div><img class="precarga" src="./assets/images/gif/loading.gif"></div>
+        <button type="button" id="btnLoadingClose" class="btn btn-primary btn-sm d-none" (click)="modal.close('Cross click')"></button>
+    </div>
+</ng-template> -->
+
+
+
+<!-- 
+<body>
+  <div class="login-container">
+    <aside class="main-aside"> 
+      <article class="d-flex flex-column bgc-primary-l4 px-1o5r py-3r">
+        <div class="c-logo ta-center">
+          <img src="assets/image/logo.png" style="width:120px;">
+        </div>
+        <p class="c-logo bc-grey-l1 ta-center fs-110g b-b-1 mt-1r">
+          Sistema Integrado de Gestión Universitaria
+        </p>
+        <a href="#" class="text c-grey-d3 d-inline-block mt-4">
+          <i class="fas fa-file-pdf text-lg c-danger mr-2"></i>Manual de Usuario
+        </a>
+        <br />
+        <a href="#" class="text c-grey-d3 d-inline-block mt-3">
+          <i class="fas fa-phone text-md c-purple-m2 mr-2"></i>995792654 - 953639582
+        </a>
+        <div class="fs-sm c-grey-d3 ta-center mt-3r">Copy Right &copy; 2020</div>
+      </article>
+    </aside>
+    <main class="main px-3r pt-3r">
+      <form class="d-grid" style="grid-template-columns: minmax(200px,1fr); gap:1rem;">
+        <div class="c-logo ta-center d-none">
+          <img src="assets/image/logo.png" style="width:120px;">
+        </div>
+        <p class="c-logo bc-grey-l1 ta-center fs-110g d-none">
+          Sistema Integrado de Gestión Universitaria
+        </p>
+  
+        <p class="c-dark-tp4 b-b-1 bc-grey-l1 fs-120g">
+          <i class="fa fa-coffee c-orange-m2 text-lg mr-o5r"></i>Welcome
+        </p>
+        <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2" >
+          <input type="text" class="form-control form-control-md shadow-none w-100g" id="usur_login" autocomplete="off" />
+          <i class="fa fa-user c-grey-m2 ml-n4"></i>
+          <label class="floating-label c-grey-l1 fs-100g ml-n1r" for="usur_login">Usuario</label>
+        </div>
+        <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2" >
+          <select class="form-control form-control-md shadow-none w-100g" id="area_key"></select>
+          <label class="floating-label c-grey-l1 fs-100g ml-n1r" for="area_key">Unidad Orgánica</label>
+        </div>
+        <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2">
+          <input type="password" class="form-control form-control-md shadow-none w-100g" id="usur_psw1" autocomplete="off" />
+          <i class="fa fa-key c-grey-m2 ml-n4"></i>
+          <label class="floating-label c-grey-l1 ml-n1r" for="usur_psw1">Contraseña</label>
+        </div>
+        <div class="text-right text-md-right mt-no75r">
+          <a href="#" class="c-primary-m2 fs-90g" data-toggle="tab" data-target="#id-tab-forgot">¿Olvide mi Contraseña?</a>
+        </div>
+        <div>
+          <button type="button" class="btn btn-info btn-block btn-md btn-bold">Ingresar al Sistema</button>
+        </div>
+      </form>
+    </main>
+
+  </div>
+  </body> -->
+
+
+  signin works!
+  
