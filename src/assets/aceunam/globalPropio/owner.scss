@@ -33,18 +33,11 @@
 .main-aside {
     grid-area: asi
 }
-.main-footer {
-    background-color: var(--bgc-system);
-    grid-area: foo;
-    /*position: fixed;*/
-}
-.main-header {
-    background-color: #157fcc;
-    grid-area: hea;
-    display:grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: 60px;
-}
+// .main-footer {
+//     background-color: var(--bgc-system);
+//     grid-area: foo;
+//     /*position: fixed;*/
+// }
 .main-nav {
     border: 1px solid #99bce8;
     grid-area: nav;
@@ -62,25 +55,25 @@
 .flex-11a{
     flex: 1 1 auto;
 }
-.footer-inner {
-    color: var(--c-system);
-    line-height: 1.5rem;
-    padding-left: 0;
-    text-align: center;
-}
+// .footer-inner {
+//     color: var(--c-system);
+//     line-height: 1.5rem;
+//     padding-left: 0;
+//     text-align: center;
+// }
 // .header-brand {
 //     margin-left: .5rem;
     
 // }
-.header-intro {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    width: auto;
-    /*width: var(--sidebar-width);*/
-    height: 100%
-}
+// .header-intro {
+//     display: -ms-flexbox;
+//     display: flex;
+//     -ms-flex-align: center;
+//     align-items: center;
+//     width: auto;
+//     /*width: var(--sidebar-width);*/
+//     height: 100%
+// }
 .pane-buttons{
     background: var(--bgc-panel);
     padding: .375rem;

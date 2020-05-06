@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -146,11 +146,6 @@ sub {
 }
 sup {
     top: -.5em
-}
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent
 }
 a:hover {
     color: #0056b3;
@@ -3900,7 +3895,7 @@ input[type=submit].btn-block {
 }
 .nav-link {
     display: block;
-    padding: .25rem .5rem
+    /*padding: .25rem .5rem*/
 }
 .nav-link:focus,
 .nav-link:hover {

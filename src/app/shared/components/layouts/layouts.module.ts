@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+// icons
+
+
 // rutas
 import { LayoutsRoutingModule } from "../layouts-routing.module";
 
@@ -38,7 +41,8 @@ imports: [
   // NgbModule,
   RouterModule,
   FormsModule,
-  CommonModule,LayoutsRoutingModule
+  CommonModule,
+  LayoutsRoutingModule,
 ],
 declarations: components,
 exports: components
