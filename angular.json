@@ -33,6 +33,10 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/ace.min.js",
+              "src/assets/js/demo.min.js"
             ]
           },
           "configurations": {
